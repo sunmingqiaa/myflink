@@ -6,10 +6,21 @@
 
     <groupId>org.example</groupId>
     <artifactId>test</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>AvroTest</module>
+        <module>Util</module>
+    </modules>
 
+    <repositories>
+        <repository>
+            <id>cloudera</id>
+            <url>https://repository.cloudera.com/artifactory/cloudera-repos/</url>
+        </repository>
+    </repositories>
+    <dependencies>
 
-   <dependencies>
        <dependency>
            <groupId>org.apache.flink</groupId>
            <artifactId>flink-java</artifactId>
@@ -32,6 +43,17 @@
            <artifactId>kafka-clients</artifactId>
            <version>0.11.0.2</version>
        </dependency>
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-avro</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.avro</groupId>
+            <artifactId>avro</artifactId>
+            <version>1.8.2</version>
+        </dependency>
+
    </dependencies>
 
 
